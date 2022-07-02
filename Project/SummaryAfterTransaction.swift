@@ -97,16 +97,19 @@ struct SummaryAfterTransaction: View {
                                     subTitle: R.string.localizable.torekeningPlaceholder()
                                 )
                                 ListSummary(
-                                    title: R.string.localizable.notesPlaceholder()
-//                                    subTitle: getInfo?.notes ?? ""
+                                    title: R.string.localizable.notesPlaceholder(),
+                                    subTitle: R.string.localizable.notesPlaceholder()
+                                    // getInfo?.notes ?? ""
                                 )
                                 ListSummary(
-                                    title: R.string.localizable.totalPlaceholder()
-//                                    subTitle: getInfo?.total ?? ""
+                                    title: R.string.localizable.totalPlaceholder(),
+                                    subTitle: R.string.localizable.totalPlaceholder()
+                                    // getInfo?.total ?? ""
                                 )
                                 ListSummary(
-                                    title: R.string.localizable.transactiontimePlaceholder()
-//                                    subTitle: getInfo?.transactiontime ?? ""
+                                    title: R.string.localizable.transactiontimePlaceholder(),
+                                    subTitle: R.string.localizable.transactiontimePlaceholder()
+                                        // getInfo?.transactiontime ?? ""
                                 )
                             }
                             Rectangle()
@@ -125,6 +128,10 @@ struct SummaryAfterTransaction: View {
                     .cornerRadius(20).padding()
                     .shadow(radius: 30)
 //                    renderToInsertPin().padding(.horizontal, 40)
+                    renderNavHome()
+                    renderBackHomeButton().padding(.horizontal, 30)
+                    Spacer()
+
             }
             }
         }

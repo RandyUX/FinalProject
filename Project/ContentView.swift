@@ -189,11 +189,11 @@ struct ContentView: View {
                             self.isPresent = false
                             print(selectedBank)
                         }
+                    Rectangle()
+                        .frame( height: 1)
+                        .foregroundColor(.secondary)
                 }
 
-                Rectangle()
-                    .frame( height: 1)
-                    .foregroundColor(.secondary)
             }
 
             Spacer()
