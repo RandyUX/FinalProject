@@ -1,0 +1,60 @@
+/*
+  Localizable.strings
+  Project
+
+  Created by Randy on 23/06/22.
+  
+*/
+
+
+"choosebank.placeholder" = "Choose Your Bank";
+"fromrekeningaccount.placeholder" = "From Rekening Account";
+"torekeningaccount.placeholder" = "To Rekening Account";
+"notes.placeholder" = "Notes";
+"inputamount.placeholder" = "Input Amount";
+"continue.placeholder" = "CONTINUE";
+"confirm.placeholder" = "CONFIRM";
+"addmoretransfer.placeholder" = "Add More Transfer";
+"yourconfirmationtransfer.placeholder" = "Your Confirmation Transfer";
+"transfer.placeholder" = "Transfer";
+"transferstatus.placeholder" = "Transfer Status";
+"thismethodtext.placeholder" = "Good Things you choose this method";
+"yourtransferpurpose.placeholder" = "Your Transfer Purpose";
+"enteringpurpose.placeholder" = "Type Your Purpose";
+"useraccount.placeholder" = "User";
+"titleinmethod.placeholder" = "Check your\nMethod Transfer";
+"useraccount2.placeholder" = "Hi User";
+"nameofbank.placeholder" = "Bank: ";
+"numberaccount.placeholder" = "number account: ";
+"confirmuser.placeholder" = "Confirm User";
+
+
+//summary before transaction
+"yourbank.placeholder" = "from bank: ";
+"from.placeholder" = "from account: ";
+"toaccount.placeholder" = "To Account: ";
+"notes.placeholder" = "Notes: ";
+"transactiontime.placeholder" = "Transaction Time: ";
+"total.placeholder" = "Total: ";
+"settimetransaction.placeholder" = "time set: ";
+"transfermethod.placeholder" = "transfermethod: ";
+
+
+
+//button
+"continue.placeholder" = "Continue";
+"confirm.placeholder" = "Confirm";
+"history.placeholder" = "History";
+"addmoretransfer.placeholder" = "Add More Transfer";
+"backhome.placeholder" = "Back To Transfer";
+"choosemethod.placeholder" = "transfermethod";
+"scheduled.placeholder" = "Scheduled";
+
+
+//summaryaftertransaction
+"fromrekening.placeholder" = "From: ";
+"torekening.placeholder" = "Transfer to: ";
+"totalamount.placeholder" = "Total Amount: ";
+"notes.placeholder" = "Notes: ";
+"date.placeholder" = "Date: ";
+

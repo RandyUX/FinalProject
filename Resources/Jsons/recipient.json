@@ -1,0 +1,28 @@
+[
+    {
+     "useraccount": [
+     
+           {
+                "id" : 1,
+                "fullname": "blekeded",
+                "rekeningaccount": "12123123123"
+            },
+             {
+                "id" : 2,
+                "fullname": "blekeded",
+                "rekeningaccount": "12123123123"
+            },
+             {
+                "id" : 3,
+                "fullname": "blekeded",
+                "rekeningaccount": "12123123123"
+            },
+             {
+                "id" : 4,
+                "fullname": "blekeded",
+                "rekeningaccount": "12123123123"
+            }
+    
+        ]
+    }
+]

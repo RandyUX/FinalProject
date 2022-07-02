@@ -1,0 +1,71 @@
+[
+        {
+            "useraccount": {
+                "fullname": "blekeded",
+                "rekeningaccount": "12123123123"
+            }
+            "settransaction": "12-12-1221",
+            "bank": [{
+                        "bankname": "CBA"
+                    },
+                     {
+                        "bankname":"ECA"
+                    },
+                     {
+                        "bankname":"KAE"
+                    },
+            ],
+            "Notes": "asdfasdfadfasd",
+            "Transactiontime": "12:00",
+            "transferpurpose": "transfer",
+            "Total": "0",
+        },
+    }
+    
+        {
+            "useraccount": {
+                "fullname": "blikidid",
+                "rekeningaccount": "12123123123"
+            }
+            "settransaction": "12-12-1221",
+            "bank": [{
+                        "bankname": "CBA"
+                    },
+                     {
+                        "bankname":"ECA"
+                    },
+                     {
+                        "bankname":"KAE"
+                    },
+            ],
+            "Notes": "asdfaojkoikjsd",
+            "Transactiontime": "12:00",
+            "transferpurpose": "transfer",
+            "Total": "0",
+        },
+    }
+    
+        {
+            "useraccount": {
+                "fullname": "blokodod",
+                "rekeningaccount": "12123123123"
+            }
+            "settransaction": "12-12-1221",
+            "bank": [{
+                        "bankname": "CBA"
+                    },
+                     {
+                        "bankname":"ECA"
+                    },
+                     {
+                        "bankname":"KAE"
+                    },
+            ],
+            "Notes": "asdfalonsd",
+            "Transactiontime": "12:00",
+            "transferpurpose": "transfer",
+            "Total": "0",
+        },
+    }
+}
+]

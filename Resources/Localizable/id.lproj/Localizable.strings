@@ -1,0 +1,40 @@
+/* 
+  Localizable.strings
+  Project
+
+  Created by Randy on 23/06/22.
+ 
+ 
+ 
+*/
+//"choosebank.title" = "Choose Bank"
+
+"choosebank.placeholder" = "pilih bank ";
+"fromrekeningaccount.placeholder" = "dari rekening";
+"torekeningaccount.placeholder" = "ke rekening";
+"notes.placeholder" = "catatan";
+"inputamount.placeholder" = "masukan jumlah";
+"continue.placeholder" = "SELANJUTNYA";
+"confirm.placeholder" = "KONFIRMASI";
+"addmoretransfer.placeholder" = "Tambah Transfer Lainnya";
+
+//catatan sebelum transfer
+"yourbank.placeholder" = "bank: ";
+"from.placeholder" = "dari: ";
+"toaccount.placeholder" = "kepada: ";
+"notes.placeholder" = "catatan: ";
+"transactiontime.placeholder" = "waktu transaksi: ";
+"total.placeholder" = "total: ";
+"transfermethod.placeholder" = "metodetransfer: ";
+
+//continue button dan konfirmasi
+"selanjutnya.placeholder" = "selanjutnya";
+"konfirmasi.placeholder" = "konfirmasi";
+"catatantransaksi.placeholder" = "catatan transaksi";
+"addmoretransfer.placeholder" = "tambahkan lainnya";
+"backhome.placeholder" = "kembali ke transfer";
+
+
+
+
+

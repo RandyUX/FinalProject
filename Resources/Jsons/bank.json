@@ -1,0 +1,44 @@
+[
+    {
+        {
+            "bankid" : 1,
+            "bankname" : "CBA"
+        },
+        {
+            "bankid" : 2,
+            "bankname" : "DIRIMAN"
+        },
+        {
+            "bankid" : 3,
+            "bankname" : "RBI"
+        },
+        {
+            "bankid" : 4,
+            "bankname" : "KDI"
+        },
+        {
+            "bankid" : 5,
+            "bankname" : "CEHA"
+        },
+        {
+            "bankid" : 6,
+            "bankname" : "DCD"
+        },
+        {
+            "bankid" : 7,
+            "bankname" : "CBC"
+        },
+        {
+            "bankid" : 8,
+            "bankname" : "DBD"
+        },
+        {
+            "bankid" : 9,
+            "bankname" : "HSH"
+        },
+        {
+            "bankid" : 10,
+            "bankname" : "LKH"
+        },
+    }
+]
