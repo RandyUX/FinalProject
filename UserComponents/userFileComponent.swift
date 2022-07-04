@@ -5,15 +5,15 @@
 //  Created by Randy on 22/06/22.
 //
 
- import SwiftUI
+import SwiftUI
 
- struct UserFileComponent: View {
-//    @State var user: String = ""
-//    @State var bank: String = ""
-//    @State var noRek: String = ""
-    @State var fullname: String = ""
-    @State var banknamed: String = ""
-    @State var rekeningaccount: String = ""
+struct UserFileComponent: View {
+    //    @State var user: String = ""
+    //    @State var bank: String = ""
+    //    @State var noRek: String = ""
+    var fullname: String
+    var banknamed: String
+    var rekeningaccount: String
 
     var body: some View {
         HStack {
@@ -36,10 +36,4 @@
             .frame( height: 1)
             .foregroundColor(.secondary)
     }
- }
-
- struct UserFileComponent_Previews: PreviewProvider {
-    static var previews: some View {
-        UserFileComponent()
-    }
- }
+}

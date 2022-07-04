@@ -17,8 +17,4 @@ struct User: Codable {
     var bankId: String = ""
     var bankName: String = ""
 
-//    enum CodingKeys: String,  CodingKey {
-//        case fullname = "fullname"
-//        case rekaccount = "rekeningaccount"
-//        case bank = "nameofbank"
 }

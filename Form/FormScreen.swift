@@ -13,6 +13,7 @@ struct FormScreen: View {
     var placeholder: String = ""
 
     @Binding var form: String
+
     var image: String = ""
     var body: some View {
         HStack(spacing: 10) {

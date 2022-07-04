@@ -6,21 +6,6 @@
 //
 
 import Foundation
-//
-// struct Article: Codable{
-//    var title: String = ""
-//    var postedDate: String = ""
-//    var imageUrl: String = ""
-//    var user = User()
-//    
-//    
-//    enum CodingKeys: String, CodingKeys {
-//        case title = "title"
-//        case postedDate = "postedDate"
-//        case imageUrl = "imageUrl"
-//        case user = "user"
-//    }
-// }
     struct Recipient: Codable {
         var id: String = ""
         var fullname: String = ""

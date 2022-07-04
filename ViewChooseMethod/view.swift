@@ -15,7 +15,7 @@
  struct MethodView: View {
     @Binding var sourceNavigation: String?
     @State private var navigationSummary: String?
-    @State var form: Users?
+    @State var form: DataForm?
 
     func tapButtonSummary() {
         navigationSummary = NextSummary.confirmSummary.rawValue

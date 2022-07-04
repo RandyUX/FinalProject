@@ -24,12 +24,19 @@ private func renderStatusIcon() -> some View {
 
 struct SummaryBeforeTransaction: View {
 
+    @State private var navigationToInsertPin: String?
+
+    @Binding var sourceNavigation: String?
+
+    @State var account: DataUser?
+
+    @State private var userResponse = [DataUser]()
+
+    @Binding var getInfo: DataForm?
+
     private func onLoad() {
         AnalyticsManager.log(AnalyticsTags.visitPin)
     }
-
-    @State private var navigationToInsertPin: String?
-    @Binding var sourceNavigation: String?
 
     func buttonToInsertPin() {
         navigationToInsertPin = NextToInsertPin.insertPin.rawValue
@@ -47,52 +54,75 @@ struct SummaryBeforeTransaction: View {
     }
 
     private func renderNavToInsertPin() -> some View {
-        NavigationLink(destination: PinTransaction(sourceNavigation: $sourceNavigation), tag: NextToInsertPin.insertPin.rawValue,
+        NavigationLink(destination: PinTransaction(sourceNavigation: $sourceNavigation, getInfo: $getInfo), tag: NextToInsertPin.insertPin.rawValue,
                        selection: $navigationToInsertPin) {EmptyView()}
     }
 
-    @Binding var getInfo: Users?
+    private func loadData() {
+        let URL = ("https://private-58e21d-bankrequest.apiary-mock.com/user")
+        Alamofire.request(URL).responseObject { (response: DataResponse<ResponseDataUser>) in
+
+            let responsedatauser = response.result.value
+            userResponse = responsedatauser?.data ?? []
+            print(userResponse.first?.fullnamed)
+            filterData()
+
+        }
+    }
+
+    private func filterData() {
+        for user in userResponse {
+            if user.rekeningaccount == getInfo?.rekeningAccount {
+                account = user
+                print(account?.fullnamed)
+            }
+        }
+    }
 
     var body: some View {
         ZStack {
-            renderStatusIcon()
+
             Color.cyan.opacity(0.4)
             VStack {
 
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading) {
 
-                        UserFileComponent(fullname: "YUMMY", banknamed: "ABC", rekeningaccount: "234-345-123")
+                        UserFileComponent(fullname: account?.fullnamed ?? "", banknamed: account?.banknamed ?? "", rekeningaccount: account?.rekeningaccount ?? "")
 
                         VStack(alignment: .leading) {
                             ListSummary(
-                                title: R.string.localizable.toaccountPlaceholder(),
-                                subTitle: getInfo?.fullname ?? ""
+                                title: R.string.localizable.nameofbankPlaceholder(),
+                                subTitle: getInfo?.bank ?? ""
                             )
                             ListSummary(
-                                title: R.string.localizable.notesPlaceholder() ,
+                                title: R.string.localizable.toaccountPlaceholder() ,
+                                subTitle: getInfo?.rekeningAccount ?? ""
+                            )
+                            ListSummary(
+                                title: R.string.localizable.notesPlaceholder(),
                                 subTitle: getInfo?.notes ?? ""
                             )
                             ListSummary(
                                 title: R.string.localizable.totalPlaceholder(),
                                 subTitle: getInfo?.total ?? ""
                             )
-                            ListSummary(
-                                title: R.string.localizable.transactiontimePlaceholder(),
-                                subTitle: getInfo?.transactiontime ?? ""
-                            )
                         }
                         Rectangle()
                             .frame( height: 1)
                             .foregroundColor(.secondary)
+
                         HStack {
-                            Text("Total").fontWeight(.bold)
+                            Text(R.string.localizable.totalPlaceholder()).fontWeight(.bold)
                             Spacer()
-                            Text("IDR 100,000").fontWeight(.bold)
+                            Text(getInfo?.total ?? "").fontWeight(.bold)
                         }
+
                     }
                     .padding()
                     .padding(.vertical, 10)
+                    .onAppear(perform: loadData)
+
                 }
                 .background(Color.white)
                 .cornerRadius(20).padding()
@@ -101,17 +131,11 @@ struct SummaryBeforeTransaction: View {
                 renderToInsertPin().padding(.horizontal, 40)
 
                 renderNavToInsertPin()
+                renderStatusIcon()
 
                 Spacer()
 
-            }
+            }.navigationBarTitle(R.string.localizable.yourconfirmationtransferPlaceholder(), displayMode: .inline)
         }
     }
 }
-
-//    struct SummaryBeforeTransaction_Previews: PreviewProvider {
-//        //@State static var getText: String = ""
-//        static var previews: some View {
-//            SummaryBeforeTransaction()
-//        }
-//    }

@@ -24,9 +24,10 @@ private func renderStatusIcon() -> some View {
 struct ConfirmUser: View {
 
     @State private var navigationChooseMethod: String?
+
     @Binding var navigationSource: String?
 
-    @State private var userResponses = [Users]()
+    @State private var historyResponse = [History]()
 
     func buttonToMethod() {
         navigationChooseMethod = NextChooseMethod.userValid.rawValue
@@ -48,12 +49,13 @@ struct ConfirmUser: View {
     }
     //
     private func loadData() {
-        Alamofire.request("https://private-58e21d-bankrequest.apiary-mock.com/questions")
-            .responseObject { ( response: DataResponse<ResponseUserAccount>) in
-                if let userResponse = response.result.value {
-                    userResponses = userResponse.useraccount
-                }
-            }
+        let URL = ("https://private-58e21d-bankrequest.apiary-mock.com/history")
+        Alamofire.request(URL).responseObject { (response: DataResponse<ResponseHistory>) in
+
+            let responsehistory = response.result.value
+            historyResponse = responsehistory?.data ?? []
+            print(historyResponse.first?.fullnamed)
+        }
     }
 
     var body: some View {
@@ -61,29 +63,13 @@ struct ConfirmUser: View {
 
             LazyVStack(alignment: .leading) {
                 renderStatusIcon()
-                UserFileComponent(fullname: "Asta", banknamed: "IRB", rekeningaccount: "343-232-567")
-                UserFileComponent(fullname: "Sutejo", banknamed: "INB", rekeningaccount: "343-456-789")
-                UserFileComponent(fullname: "Sukiman", banknamed: "CBA", rekeningaccount: "343-678-890")
-                UserFileComponent(fullname: "Sukidi", banknamed: "TBI", rekeningaccount: "343-678-891")
-                UserFileComponent(fullname: "Sukiem", banknamed: "HBE", rekeningaccount: "343-676-894")
-                UserFileComponent(fullname: "manteman", banknamed: "ABO", rekeningaccount: "343-673-893")
-                UserFileComponent(fullname: "Tukidi", banknamed: "OBE", rekeningaccount: "343-671-894")
-                UserFileComponent(fullname: "Sumanto", banknamed: "HBI", rekeningaccount: "342-672-892")
-                UserFileComponent(fullname: "Boboho", banknamed: "NBC", rekeningaccount: "341-673-898")
-            }.padding()
-        }
-        .navigationBarTitle("History", displayMode: .inline)
+                ForEach(historyResponse) { data in
+                    UserFileComponent(fullname: data.fullnamed, banknamed: data.banknamed, rekeningaccount: data.rekeningaccount)
+                }
 
-        //        VStack {
-        //            renderNavMethod()
-        //            renderToMethod()
-        //                .padding()
-        //        }
+            }.padding()
+                .onAppear(perform: loadData)
+        }
+        .navigationBarTitle(R.string.localizable.historyPlaceholder(), displayMode: .inline)
     }
 }
-
-// struct ConfirmUser_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ConfirmUser()
-//    }
-// }
