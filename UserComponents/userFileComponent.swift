@@ -8,9 +8,6 @@
 import SwiftUI
 
 struct UserFileComponent: View {
-    //    @State var user: String = ""
-    //    @State var bank: String = ""
-    //    @State var noRek: String = ""
     var fullname: String
     var banknamed: String
     var rekeningaccount: String

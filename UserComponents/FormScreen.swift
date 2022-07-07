@@ -10,7 +10,7 @@ import Alamofire
 
 struct FormScreen: View {
 
-    var placeholder: String = ""
+    var placeholder: String = DefaultValue.emptyString
 
     @Binding var form: String
 

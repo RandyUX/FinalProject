@@ -14,34 +14,23 @@ struct PinTransaction: View {
     @Binding var sourceNavigation: String?
     @Binding var getInfo: DataForm?
 
-    private func onLoad() {
-        AnalyticsManager.log(AnalyticsTags.visitfinalsummary)
-    }
-
     var body: some View {
 
-        // NavigationView {
         VStack {
             if status {
-                SummaryAfterTransaction(sourceNavigation: $sourceNavigation, getInfo: $getInfo )
+                SummaryAfterTransaction(sourceNavigation: $sourceNavigation, getInfo: $getInfo)
             } else {
                 Verification(status: $status)
             }
 
         }.onAppear {
 
-            onLoad()
+            // onLoad()
         }
 
         .preferredColorScheme(self.status ? .light : .light)
         .animation(.spring())
 
-    }
-}
-
-struct Home: View {
-    var body: some View {
-        Text("Home")
     }
 }
 
@@ -68,6 +57,7 @@ struct Verification: View {
 struct NumberPad: View {
     @Binding var codes: [String]
     @Binding var status: Bool
+
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             ForEach(datas) { index in
@@ -111,6 +101,7 @@ struct NumberPad: View {
         }.foregroundColor(.black)
             .navigationBarTitle("Insert Your Pin", displayMode: .inline)
     }
+
     func getspacing() -> CGFloat {
         return UIScreen.main.bounds.width / 3
     }
@@ -120,7 +111,6 @@ struct NumberPad: View {
         for index in self.codes {
 
             code += index
-
         }
         return code
     }

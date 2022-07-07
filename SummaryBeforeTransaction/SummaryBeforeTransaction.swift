@@ -24,26 +24,15 @@ private func renderStatusIcon() -> some View {
 
 struct SummaryBeforeTransaction: View {
 
-    @State private var navigationToInsertPin: String?
-
     @Binding var sourceNavigation: String?
+    @State  var navigationToInsertPin: String?
 
-    @State var account: DataUser?
+    @ObservedObject var viewModel: SummaryBeforeTransactionModel
 
-    @State private var userResponse = [DataUser]()
-
-    @Binding var getInfo: DataForm?
-
-    private func onLoad() {
-        AnalyticsManager.log(AnalyticsTags.visitPin)
-    }
-
-    func buttonToInsertPin() {
-        navigationToInsertPin = NextToInsertPin.insertPin.rawValue
-    }
+    // @Binding var getInfo: DataForm?
 
     private func renderToInsertPin() -> some View {
-        Button(action: buttonToInsertPin) {Text(R.string.localizable.confirmPlaceholder()).padding()
+        Button(action: viewModel.buttonToInsertPin) {Text(R.string.localizable.confirmPlaceholder()).padding()
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
                 .cornerRadius(100)
@@ -52,31 +41,15 @@ struct SummaryBeforeTransaction: View {
             .padding(.top, 10)}
 
     }
+    //    func buttonToInsertPin() {
+    //        navigationToInsertPin = NextToInsertPin.insertPin.rawValue
+    //    }
 
     private func renderNavToInsertPin() -> some View {
-        NavigationLink(destination: PinTransaction(sourceNavigation: $sourceNavigation, getInfo: $getInfo), tag: NextToInsertPin.insertPin.rawValue,
-                       selection: $navigationToInsertPin) {EmptyView()}
-    }
-
-    private func loadData() {
-        let URL = ("https://private-58e21d-bankrequest.apiary-mock.com/user")
-        Alamofire.request(URL).responseObject { (response: DataResponse<ResponseDataUser>) in
-
-            let responsedatauser = response.result.value
-            userResponse = responsedatauser?.data ?? []
-            print(userResponse.first?.fullnamed)
-            filterData()
-
-        }
-    }
-
-    private func filterData() {
-        for user in userResponse {
-            if user.rekeningaccount == getInfo?.rekeningAccount {
-                account = user
-                print(account?.fullnamed)
-            }
-        }
+        NavigationLink(destination: PinTransaction(sourceNavigation: $sourceNavigation,
+                                                   getInfo: $viewModel.getInfo),
+                       tag: NextToInsertPin.insertPin.rawValue,
+                       selection: $viewModel.navigationToInsertPin) {EmptyView()}
     }
 
     var body: some View {
@@ -88,24 +61,26 @@ struct SummaryBeforeTransaction: View {
                 VStack(alignment: .leading) {
                     VStack(alignment: .leading) {
 
-                        UserFileComponent(fullname: account?.fullnamed ?? "", banknamed: account?.banknamed ?? "", rekeningaccount: account?.rekeningaccount ?? "")
+                        UserFileComponent(fullname: viewModel.confirmSummary.datauser.fullnamed,
+                                          banknamed: viewModel.confirmSummary.datauser.banknamed,
+                                          rekeningaccount: viewModel.confirmSummary.datauser.rekeningaccount)
 
                         VStack(alignment: .leading) {
                             ListSummary(
                                 title: R.string.localizable.nameofbankPlaceholder(),
-                                subTitle: getInfo?.bank ?? ""
+                                subTitle: viewModel.confirmSummary.listbank.bankname
                             )
                             ListSummary(
                                 title: R.string.localizable.toaccountPlaceholder() ,
-                                subTitle: getInfo?.rekeningAccount ?? ""
+                                subTitle: viewModel.confirmSummary.datauser.rekeningaccount
                             )
                             ListSummary(
                                 title: R.string.localizable.notesPlaceholder(),
-                                subTitle: getInfo?.notes ?? ""
+                                subTitle: viewModel.confirmSummary.notes
                             )
                             ListSummary(
                                 title: R.string.localizable.totalPlaceholder(),
-                                subTitle: getInfo?.total ?? ""
+                                subTitle: String(viewModel.confirmSummary.total)
                             )
                         }
                         Rectangle()
@@ -115,13 +90,15 @@ struct SummaryBeforeTransaction: View {
                         HStack {
                             Text(R.string.localizable.totalPlaceholder()).fontWeight(.bold)
                             Spacer()
-                            Text(getInfo?.total ?? "").fontWeight(.bold)
+                            Text(String(viewModel.confirmSummary.total)).fontWeight(.bold)
                         }
 
                     }
                     .padding()
                     .padding(.vertical, 10)
-                    .onAppear(perform: loadData)
+                    .onAppear {
+                        viewModel.loadData(getInfo: viewModel.getInfo ?? DataForm())
+                    }
 
                 }
                 .background(Color.white)
@@ -132,8 +109,6 @@ struct SummaryBeforeTransaction: View {
 
                 renderNavToInsertPin()
                 renderStatusIcon()
-
-                Spacer()
 
             }.navigationBarTitle(R.string.localizable.yourconfirmationtransferPlaceholder(), displayMode: .inline)
         }

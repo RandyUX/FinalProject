@@ -23,18 +23,15 @@ private func renderStatusIcon() -> some View {
 
 struct ConfirmUser: View {
 
-    @State private var navigationChooseMethod: String?
+    // @State private var navigationChooseMethod: String?
 
     @Binding var navigationSource: String?
 
-    @State private var historyResponse = [History]()
-
-    func buttonToMethod() {
-        navigationChooseMethod = NextChooseMethod.userValid.rawValue
-    }
+    @StateObject var confirmUserModel = ConfirmUserModel()
+    // @Binding var getInfo: DataForm?
 
     private func renderToMethod() -> some View {
-        Button(action: buttonToMethod) {Text(R.string.localizable.continuePlaceholder()).padding()
+        Button(action: confirmUserModel.buttonToMethod) {Text(R.string.localizable.continuePlaceholder()).padding()
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)
                 .cornerRadius(100)
@@ -44,18 +41,8 @@ struct ConfirmUser: View {
     }
 
     private func renderNavMethod() -> some View {
-        NavigationLink(destination: MethodView(sourceNavigation: $navigationSource), tag: NextChooseMethod.userValid.rawValue,
-                       selection: $navigationChooseMethod) {EmptyView()}
-    }
-    //
-    private func loadData() {
-        let URL = ("https://private-58e21d-bankrequest.apiary-mock.com/history")
-        Alamofire.request(URL).responseObject { (response: DataResponse<ResponseHistory>) in
-
-            let responsehistory = response.result.value
-            historyResponse = responsehistory?.data ?? []
-            print(historyResponse.first?.fullnamed)
-        }
+        NavigationLink(destination: PinTransaction(sourceNavigation: $navigationSource, getInfo: $confirmUserModel.getInfo), tag: NextChooseMethod.userValid.rawValue,
+                       selection: $confirmUserModel.navigationChooseMethod) {EmptyView()}
     }
 
     var body: some View {
@@ -63,12 +50,12 @@ struct ConfirmUser: View {
 
             LazyVStack(alignment: .leading) {
                 renderStatusIcon()
-                ForEach(historyResponse) { data in
+                ForEach(confirmUserModel.historyResponse) { data in
                     UserFileComponent(fullname: data.fullnamed, banknamed: data.banknamed, rekeningaccount: data.rekeningaccount)
                 }
 
             }.padding()
-                .onAppear(perform: loadData)
+                .onAppear(perform: confirmUserModel.loadData)
         }
         .navigationBarTitle(R.string.localizable.historyPlaceholder(), displayMode: .inline)
     }

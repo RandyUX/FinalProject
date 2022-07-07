@@ -19,9 +19,16 @@
 		522C485A28694B1B00A2DA4E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C485928694B1B00A2DA4E /* R.generated.swift */; };
 		522C485F28697B5D00A2DA4E /* check-mark.json in Resources */ = {isa = PBXBuildFile; fileRef = 522C485E28697B5D00A2DA4E /* check-mark.json */; };
 		522C486128697EC900A2DA4E /* LottieAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C486028697EC900A2DA4E /* LottieAnimations.swift */; };
-		522C4864286994F100A2DA4E /* listBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522C4863286994F100A2DA4E /* listBank.swift */; };
 		522F3CD3286BE515006AC60D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 522F3CD2286BE515006AC60D /* GoogleService-Info.plist */; };
 		522F3CD6286C02AC006AC60D /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F3CD5286C02AC006AC60D /* AnalyticsManager.swift */; };
+		523F3B7C2876CABB006B51C6 /* ConfirmSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F3B7B2876CABB006B51C6 /* ConfirmSummary.swift */; };
+		523F3B7E2876CB5F006B51C6 /* ConfirmResponseSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F3B7D2876CB5F006B51C6 /* ConfirmResponseSummary.swift */; };
+		523F3B812876CD6C006B51C6 /* ConfirmInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F3B802876CD6C006B51C6 /* ConfirmInput.swift */; };
+		5240532D2873D7E00060B49C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240532C2873D7E00060B49C /* ContentViewModel.swift */; };
+		524053312873EC990060B49C /* ConfirmUserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524053302873EC990060B49C /* ConfirmUserModel.swift */; };
+		524053332873F2630060B49C /* SummaryBeforeTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524053322873F2630060B49C /* SummaryBeforeTransactionViewModel.swift */; };
+		52405335287408DD0060B49C /* PinTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52405334287408DD0060B49C /* PinTransactionViewModel.swift */; };
+		5240533728740AFF0060B49C /* SummaryAfterTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5240533628740AFF0060B49C /* SummaryAfterTransactionViewModel.swift */; };
 		524465032865574B002AD967 /* data.json in Sources */ = {isa = PBXBuildFile; fileRef = 524465022865574B002AD967 /* data.json */; };
 		5244650628655793002AD967 /* JsonReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244650528655793002AD967 /* JsonReader.swift */; };
 		5244650E28655FEE002AD967 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5244650D28655FEE002AD967 /* User.swift */; };
@@ -44,17 +51,10 @@
 		5251F0232862C1680065E6DA /* FormScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251F0222862C1680065E6DA /* FormScreen.swift */; };
 		5251F0252862CA140065E6DA /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251F0242862CA140065E6DA /* ButtonView.swift */; };
 		5251F0282862EBAD0065E6DA /* userFileComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251F0272862EBAD0065E6DA /* userFileComponent.swift */; };
-		5251F0312863717C0065E6DA /* view.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251F0302863717C0065E6DA /* view.swift */; };
-		5251F0342863726E0065E6DA /* homeChooseMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251F0332863726E0065E6DA /* homeChooseMethod.swift */; };
-		5251F036286378180065E6DA /* viewMethodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251F035286378180065E6DA /* viewMethodModel.swift */; };
-		5251F038286393EA0065E6DA /* chooseMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251F037286393E90065E6DA /* chooseMethodViewModel.swift */; };
-		5251F03A2863962B0065E6DA /* chooseMethodCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251F0392863962B0065E6DA /* chooseMethodCardView.swift */; };
-		5251F03C2863B81B0065E6DA /* addPurpose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251F03B2863B81B0065E6DA /* addPurpose.swift */; };
 		5251F0452863FE800065E6DA /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5251F0432863FE7F0065E6DA /* Montserrat-VariableFont_wght.ttf */; };
 		5251F0462863FE800065E6DA /* Montserrat-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5251F0442863FE7F0065E6DA /* Montserrat-Italic-VariableFont_wght.ttf */; };
 		5251F04A286401BB0065E6DA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5251F04C286401BB0065E6DA /* Localizable.strings */; };
 		527C8C2C286E9EA500DBEFA6 /* 50820-blue-loading.json in Resources */ = {isa = PBXBuildFile; fileRef = 527C8C2B286E9EA500DBEFA6 /* 50820-blue-loading.json */; };
-		529C495D286DA0EE00CEA5F2 /* Transfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529C495C286DA0EE00CEA5F2 /* Transfer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,9 +69,16 @@
 		522C485928694B1B00A2DA4E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		522C485E28697B5D00A2DA4E /* check-mark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "check-mark.json"; sourceTree = "<group>"; };
 		522C486028697EC900A2DA4E /* LottieAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieAnimations.swift; sourceTree = "<group>"; };
-		522C4863286994F100A2DA4E /* listBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listBank.swift; sourceTree = "<group>"; };
 		522F3CD2286BE515006AC60D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		522F3CD5286C02AC006AC60D /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		523F3B7B2876CABB006B51C6 /* ConfirmSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSummary.swift; sourceTree = "<group>"; };
+		523F3B7D2876CB5F006B51C6 /* ConfirmResponseSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmResponseSummary.swift; sourceTree = "<group>"; };
+		523F3B802876CD6C006B51C6 /* ConfirmInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmInput.swift; sourceTree = "<group>"; };
+		5240532C2873D7E00060B49C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		524053302873EC990060B49C /* ConfirmUserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmUserModel.swift; sourceTree = "<group>"; };
+		524053322873F2630060B49C /* SummaryBeforeTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryBeforeTransactionViewModel.swift; sourceTree = "<group>"; };
+		52405334287408DD0060B49C /* PinTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinTransactionViewModel.swift; sourceTree = "<group>"; };
+		5240533628740AFF0060B49C /* SummaryAfterTransactionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryAfterTransactionViewModel.swift; sourceTree = "<group>"; };
 		524465022865574B002AD967 /* data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = data.json; sourceTree = "<group>"; };
 		5244650528655793002AD967 /* JsonReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonReader.swift; sourceTree = "<group>"; };
 		5244650D28655FEE002AD967 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -94,19 +101,12 @@
 		5251F0222862C1680065E6DA /* FormScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormScreen.swift; sourceTree = "<group>"; };
 		5251F0242862CA140065E6DA /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		5251F0272862EBAD0065E6DA /* userFileComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userFileComponent.swift; sourceTree = "<group>"; };
-		5251F0302863717C0065E6DA /* view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view.swift; sourceTree = "<group>"; };
-		5251F0332863726E0065E6DA /* homeChooseMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeChooseMethod.swift; sourceTree = "<group>"; };
-		5251F035286378180065E6DA /* viewMethodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewMethodModel.swift; sourceTree = "<group>"; };
-		5251F037286393E90065E6DA /* chooseMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chooseMethodViewModel.swift; sourceTree = "<group>"; };
-		5251F0392863962B0065E6DA /* chooseMethodCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chooseMethodCardView.swift; sourceTree = "<group>"; };
-		5251F03B2863B81B0065E6DA /* addPurpose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addPurpose.swift; sourceTree = "<group>"; };
 		5251F03F2863F4E50065E6DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		5251F0432863FE7F0065E6DA /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		5251F0442863FE7F0065E6DA /* Montserrat-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		5251F04B286401BB0065E6DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5251F04D286401E70065E6DA /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		527C8C2B286E9EA500DBEFA6 /* 50820-blue-loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "50820-blue-loading.json"; sourceTree = "<group>"; };
-		529C495C286DA0EE00CEA5F2 /* Transfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transfer.swift; sourceTree = "<group>"; };
 		5622B571918C8DD8FDB9BEF4 /* Pods-Project.dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.dev.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.dev.xcconfig"; sourceTree = "<group>"; };
 		98C124DE28BE2632E577CB47 /* Pods-Project.prod.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project.prod.xcconfig"; path = "Target Support Files/Pods-Project/Pods-Project.prod.xcconfig"; sourceTree = "<group>"; };
 		AE0B6C9E71B9B6CEC980C1C0 /* Pods_Project.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,20 +154,65 @@
 			path = LottieFile;
 			sourceTree = "<group>";
 		};
-		522C4862286994CC00A2DA4E /* BankListPicker */ = {
-			isa = PBXGroup;
-			children = (
-				522C4863286994F100A2DA4E /* listBank.swift */,
-			);
-			path = BankListPicker;
-			sourceTree = "<group>";
-		};
 		522F3CD4286C0295006AC60D /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
 				522F3CD5286C02AC006AC60D /* AnalyticsManager.swift */,
 			);
 			path = Analytics;
+			sourceTree = "<group>";
+		};
+		523F3B7F2876CD4C006B51C6 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				523F3B802876CD6C006B51C6 /* ConfirmInput.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		52405338287436200060B49C /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				5240532C2873D7E00060B49C /* ContentViewModel.swift */,
+				5251EFCA28603C900065E6DA /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		52405339287436610060B49C /* ConfirmUser */ = {
+			isa = PBXGroup;
+			children = (
+				5251EFD62860564E0065E6DA /* ConfirmUser.swift */,
+				524053302873EC990060B49C /* ConfirmUserModel.swift */,
+			);
+			path = ConfirmUser;
+			sourceTree = "<group>";
+		};
+		5240533A287436980060B49C /* SummaryBeforeTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				524053322873F2630060B49C /* SummaryBeforeTransactionViewModel.swift */,
+				5251F016286262FC0065E6DA /* SummaryBeforeTransaction.swift */,
+			);
+			path = SummaryBeforeTransaction;
+			sourceTree = "<group>";
+		};
+		5240533B287436CA0060B49C /* PinTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				52405334287408DD0060B49C /* PinTransactionViewModel.swift */,
+				5251F01C2862634E0065E6DA /* PinTransaction.swift */,
+			);
+			path = PinTransaction;
+			sourceTree = "<group>";
+		};
+		5240533C287436FB0060B49C /* SummaryAfterTransaction */ = {
+			isa = PBXGroup;
+			children = (
+				5240533628740AFF0060B49C /* SummaryAfterTransactionViewModel.swift */,
+				5251F018286263190065E6DA /* SummaryAfterTransaction.swift */,
+			);
+			path = SummaryAfterTransaction;
 			sourceTree = "<group>";
 		};
 		524465012865570B002AD967 /* Jsons */ = {
@@ -200,6 +245,7 @@
 		52490C72286AE371004FFB40 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				523F3B7F2876CD4C006B51C6 /* Request */,
 				52490C74286AEC92004FFB40 /* Response */,
 				52490C73286AE3B5004FFB40 /* Object */,
 			);
@@ -213,6 +259,7 @@
 				253FE2D4287093E000CEBA8F /* History.swift */,
 				253FE2D82870A50300CEBA8F /* DataForm.swift */,
 				2515121F28733F1D0060078E /* DataUser.swift */,
+				523F3B7B2876CABB006B51C6 /* ConfirmSummary.swift */,
 			);
 			path = Object;
 			sourceTree = "<group>";
@@ -223,6 +270,7 @@
 				52490C7E286AF5BA004FFB40 /* ResponseBank.swift */,
 				253FE2D62870957E00CEBA8F /* ResponseHistory.swift */,
 				2515122128733F550060078E /* ResponseDataUser.swift */,
+				523F3B7D2876CB5F006B51C6 /* ConfirmResponseSummary.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -238,16 +286,17 @@
 		5251EFBC28603C900065E6DA = {
 			isa = PBXGroup;
 			children = (
+				5240533C287436FB0060B49C /* SummaryAfterTransaction */,
+				5240533B287436CA0060B49C /* PinTransaction */,
+				5240533A287436980060B49C /* SummaryBeforeTransaction */,
+				52405339287436610060B49C /* ConfirmUser */,
+				52405338287436200060B49C /* ContentView */,
 				522F3CD4286C0295006AC60D /* Analytics */,
 				522F3CD2286BE515006AC60D /* GoogleService-Info.plist */,
 				52490C77286AED8B004FFB40 /* Constant */,
 				52490C72286AE371004FFB40 /* Model */,
-				522C4862286994CC00A2DA4E /* BankListPicker */,
 				522C485D28697AE900A2DA4E /* LottieFile */,
-				5251F03D2863F44B0065E6DA /* Resources */,
-				5251F02F28636F460065E6DA /* ViewChooseMethod */,
 				5251F0262862EB840065E6DA /* UserComponents */,
-				5251F0212862C1540065E6DA /* Form */,
 				5251F01E2862C05E0065E6DA /* ButtonStyles */,
 				5251EFC728603C900065E6DA /* Project */,
 				5251EFC628603C900065E6DA /* Products */,
@@ -269,13 +318,7 @@
 			children = (
 				5251F03F2863F4E50065E6DA /* Info.plist */,
 				2515121D2873168C0060078E /* PinInput.swift */,
-				529C495C286DA0EE00CEA5F2 /* Transfer.swift */,
-				5251F016286262FC0065E6DA /* SummaryBeforeTransaction.swift */,
-				5251EFD62860564E0065E6DA /* ConfirmUser.swift */,
 				5251EFC828603C900065E6DA /* ProjectApp.swift */,
-				5251EFCA28603C900065E6DA /* ContentView.swift */,
-				5251F018286263190065E6DA /* SummaryAfterTransaction.swift */,
-				5251F01C2862634E0065E6DA /* PinTransaction.swift */,
 				5251EFCC28603C960065E6DA /* Assets.xcassets */,
 				5251EFCE28603C960065E6DA /* Preview Content */,
 			);
@@ -299,34 +342,15 @@
 			path = ButtonStyles;
 			sourceTree = "<group>";
 		};
-		5251F0212862C1540065E6DA /* Form */ = {
-			isa = PBXGroup;
-			children = (
-				5251F0222862C1680065E6DA /* FormScreen.swift */,
-			);
-			path = Form;
-			sourceTree = "<group>";
-		};
 		5251F0262862EB840065E6DA /* UserComponents */ = {
 			isa = PBXGroup;
 			children = (
-				5204D5E7286DEADB00A521CF /* ListSummary.swift */,
 				5251F0272862EBAD0065E6DA /* userFileComponent.swift */,
+				5204D5E7286DEADB00A521CF /* ListSummary.swift */,
+				5251F0222862C1680065E6DA /* FormScreen.swift */,
+				5251F03D2863F44B0065E6DA /* Resources */,
 			);
 			path = UserComponents;
-			sourceTree = "<group>";
-		};
-		5251F02F28636F460065E6DA /* ViewChooseMethod */ = {
-			isa = PBXGroup;
-			children = (
-				5251F035286378180065E6DA /* viewMethodModel.swift */,
-				5251F0302863717C0065E6DA /* view.swift */,
-				5251F0332863726E0065E6DA /* homeChooseMethod.swift */,
-				5251F037286393E90065E6DA /* chooseMethodViewModel.swift */,
-				5251F0392863962B0065E6DA /* chooseMethodCardView.swift */,
-				5251F03B2863B81B0065E6DA /* addPurpose.swift */,
-			);
-			path = ViewChooseMethod;
 			sourceTree = "<group>";
 		};
 		5251F03D2863F44B0065E6DA /* Resources */ = {
@@ -539,29 +563,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				2515121E2873168C0060078E /* PinInput.swift in Sources */,
+				523F3B7E2876CB5F006B51C6 /* ConfirmResponseSummary.swift in Sources */,
+				5240532D2873D7E00060B49C /* ContentViewModel.swift in Sources */,
 				5244650E28655FEE002AD967 /* User.swift in Sources */,
-				522C4864286994F100A2DA4E /* listBank.swift in Sources */,
 				522C485A28694B1B00A2DA4E /* R.generated.swift in Sources */,
 				5244651028656004002AD967 /* recipient.swift in Sources */,
-				5251F0312863717C0065E6DA /* view.swift in Sources */,
 				253FE2D72870957E00CEBA8F /* ResponseHistory.swift in Sources */,
 				52490C7F286AF5BA004FFB40 /* ResponseBank.swift in Sources */,
 				253FE2D5287093E000CEBA8F /* History.swift in Sources */,
 				253FE2D92870A50300CEBA8F /* DataForm.swift in Sources */,
 				5244651228659E05002AD967 /* recipient.json in Sources */,
+				52405335287408DD0060B49C /* PinTransactionViewModel.swift in Sources */,
 				52490C79286AED9F004FFB40 /* DefaultValue.swift in Sources */,
 				52490C7D286AEFCA004FFB40 /* Banks.swift in Sources */,
+				524053332873F2630060B49C /* SummaryBeforeTransactionViewModel.swift in Sources */,
 				5251EFCB28603C900065E6DA /* ContentView.swift in Sources */,
 				524465032865574B002AD967 /* data.json in Sources */,
-				5251F038286393EA0065E6DA /* chooseMethodViewModel.swift in Sources */,
 				5251F0232862C1680065E6DA /* FormScreen.swift in Sources */,
 				5251F0252862CA140065E6DA /* ButtonView.swift in Sources */,
-				5251F0342863726E0065E6DA /* homeChooseMethod.swift in Sources */,
 				5251EFC928603C900065E6DA /* ProjectApp.swift in Sources */,
 				5251F0202862C0C50065E6DA /* ButtonStyles.swift in Sources */,
 				5251F01D2862634E0065E6DA /* PinTransaction.swift in Sources */,
+				5240533728740AFF0060B49C /* SummaryAfterTransactionViewModel.swift in Sources */,
+				523F3B7C2876CABB006B51C6 /* ConfirmSummary.swift in Sources */,
 				5251F019286263190065E6DA /* SummaryAfterTransaction.swift in Sources */,
 				5244651828659E94002AD967 /* bank.json in Sources */,
+				523F3B812876CD6C006B51C6 /* ConfirmInput.swift in Sources */,
 				5244650628655793002AD967 /* JsonReader.swift in Sources */,
 				5251EFD72860564F0065E6DA /* ConfirmUser.swift in Sources */,
 				5204D5E8286DEADB00A521CF /* ListSummary.swift in Sources */,
@@ -569,12 +596,9 @@
 				2515122028733F1D0060078E /* DataUser.swift in Sources */,
 				5251F017286262FC0065E6DA /* SummaryBeforeTransaction.swift in Sources */,
 				522F3CD6286C02AC006AC60D /* AnalyticsManager.swift in Sources */,
-				5251F036286378180065E6DA /* viewMethodModel.swift in Sources */,
 				5251F0282862EBAD0065E6DA /* userFileComponent.swift in Sources */,
-				5251F03A2863962B0065E6DA /* chooseMethodCardView.swift in Sources */,
 				2515122228733F550060078E /* ResponseDataUser.swift in Sources */,
-				5251F03C2863B81B0065E6DA /* addPurpose.swift in Sources */,
-				529C495D286DA0EE00CEA5F2 /* Transfer.swift in Sources */,
+				524053312873EC990060B49C /* ConfirmUserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

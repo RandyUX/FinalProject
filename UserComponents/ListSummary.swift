@@ -10,6 +10,8 @@ import SwiftUI
 struct ListSummary: View {
     var title = ""
     var subTitle = ""
+//    var title = ""
+//    var subTitle = ""
     var body: some View {
         HStack {
             Text(title)
